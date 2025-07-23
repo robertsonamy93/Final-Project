@@ -54,6 +54,14 @@ main {
     margin-bottom: 96px;
 }
 
+button {
+    cursor: pointer;
+    transition: background-color 300ms ease-in-out;
+}
+
+button:hover {
+    background-color:rgb(69, 17, 173);
+ }
 
 
 
@@ -138,7 +146,7 @@ main {
 }
 
 .nav__link--primary:hover {
-    color:#ffffff33;
+    color:#ffffff75;
 }
 
 .nav__link--login {
@@ -169,6 +177,7 @@ main {
 .templates__container {
     display: flex;
     width: 100%;
+    padding-bottom: 96px;
 
     padding-top: 96px;
     align-items: center;
@@ -289,7 +298,7 @@ main {
 .features__container {
     display: flex;
     width: 100%;
-    padding: 80px 0px;
+    padding: 96px 0px;
     align-items: center;
     justify-content: center;
 }
@@ -396,6 +405,8 @@ main {
 .quality__work--right {
     width: 50%;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
 }
 
 .quality__work--image {
@@ -414,7 +425,7 @@ main {
     fill: rgb(100, 21, 255);
     --tw-text-opacity: 1;
     color: rgba(100, 21, 255, var(--tw-text-opacity));
-    z-index: 0;
+    z-index: -1;
     display: block;
 }
 
@@ -462,9 +473,94 @@ main {
     width: 141.688px;
     font-weight: 700;
     margin-top: 30px;
-    cursor: pointer;
-    
 }
+
+
+
+/* STEPS */
+
+.steps__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.steps__right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0 32px 64px
+}
+
+.steps__image--wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.steps__image {
+    width: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+.steps__grid {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    bottom: 0;
+    opacity: 0.15;
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%) scaleX(1) scaleY(1);
+    fill: rgba(100, 21, 255);
+    z-index: -1;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 32px;
+}
+
+.steps__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    font-size: 16px;
+    color:#6415ff;
+    margin: 0;
+    padding: 0;
+}
+
+.steps__sub--title {
+    font-size: 48px;
+    font-weight: 900;
+    margin: 16px 0;
+    letter-spacing: 1.6px;
+}
+
+.step__title {
+    font-weight: 600px;
+    font-size: 20px;
+    color: #243e63;
+    line-height: 1;
+}
+
+.step__number {
+    font-weight: 600px;
+    font-size: 36px;
+    line-height: 1;
+    color: #cbd5e0;
+}
+
+.step__para {
+    margin: 0, 70px, 36px, 30px;
+}
+
+
+
+
 
 
 
