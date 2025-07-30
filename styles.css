@@ -762,9 +762,26 @@ button {
     background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
 }
 
-.plan__top {
+.plan__top--1 {
     padding: 32px;
     text-align: center;
+    border:  solid 0.25px;
+    border-color:#929cac60
+}
+
+.plan__top--2 {
+    padding: 32px;
+    text-align: center;
+    border:  solid 0.25px;
+    border-color:#929cac60;
+    border-top: none;
+}
+
+.plan__top--3 {
+    padding: 32px;
+    text-align: center;
+    border:  solid 0.25px;
+    border-color:#929cac60
 }
 
 .plan__name {
@@ -826,9 +843,25 @@ button {
     margin: 4px 0;
 }
 
-.plan__middle {
+.plan__middle--1 {
     padding: 32px;
     text-align: center;
+    border:  solid 0.25px;
+    border-color:#929cac60
+}
+
+.plan__middle--2 {
+    padding: 32px;
+    text-align: center;
+    border:  solid 0.25px;
+    border-color:#929cac60;
+}
+
+.plan__middle--3 {
+    padding: 32px;
+    text-align: center;
+    border:  solid 0.25px;
+    border-color:#929cac60
 }
 
 .plan__target {
@@ -918,9 +951,10 @@ button {
 
 .plan__bottom {
     text-align: center;
-    margin: 36px 0 36px 0;
     position: relative;
-
+    border:  solid 0.25px;
+    border-color:#929cac60;
+    padding: 32px 96px
 }
 
 .plans__blob {
@@ -933,6 +967,11 @@ button {
     width: 256px;
     opacity: 0.25;
 }
+
+
+/* TESTIMONIALS */
+
+
    
 
 
