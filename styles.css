@@ -8,6 +8,7 @@
     color: #243e63;
 }
 
+
 section {
     padding: 0 32px;
 }
@@ -61,7 +62,11 @@ button {
     transition: background-color 300ms ease-in-out;
 }
 
-button:hover {
+.header__email--btn:hover {
+    background-color:rgb(69, 17, 173);
+ }
+
+ .learn__more--button:hover {
     background-color:rgb(69, 17, 173);
  }
 
@@ -180,8 +185,8 @@ button:hover {
     display: flex;
     width: 100%;
     padding-bottom: 96px;
-
     padding-top: 96px;
+    padding-left: 80px;
     align-items: center;
 }
 
@@ -706,8 +711,8 @@ button:hover {
     line-height: 1.625;
     color: #7c8ba1;
     text-align: center;
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-left: 400px;
+    padding-right: 400px;
 }
 
 .pricing__container {
@@ -722,6 +727,7 @@ button:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .plan {
@@ -744,6 +750,18 @@ button:hover {
     height: 8px;
 }
 
+.plan:nth-child(1) .plan__stripe {
+    background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+}
+
+.plan:nth-child(2) {
+    background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
+}
+
+.plan:nth-child(3) .plan__stripe {
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+}
+
 .plan__top {
     padding: 32px;
     text-align: center;
@@ -751,20 +769,59 @@ button:hover {
 
 .plan__name {
     font-size: 20px;
+ }
 
-}
+ .plan__name__2 {
+    font-size: 20px;
+ }
 
-.plan__name, .plan__price, .plan__duration {
+ .plan:nth-child(1) .plan__name, .plan__price {
+    color: #242424
+ }
+
+ .plan:nth-child(3) .plan__name, .plan__price {
+    color: #242424
+ }
+
+ .plan:nth-child(1) .plan__duration {
+    color: #a0aec0;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+ }
+
+ .plan:nth-child(3) .plan__duration {
+    color: #a0aec0;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+ }
+
+ .plan__duration__2 {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+ }
+
+ .plan__name__2, .plan__price__2, .plan__duration__2, .plan__target__2, .plan__feature__2 {
+    color: #fff
+ }
+
+ .plan__name, .plan__price, .plan__duration {
     font-weight: bold;
     line-height: 1.625;
     text-transform: uppercase;
 }
 
-.plan:nth-child(odd) .plan__name, .plan:nth-child(odd) .plan__price, .plan:nth-child(odd) .plan__target {
-    color: #1a202c;
+ .plan__name__2, .plan__price__2, .plan__duration__2 {
+    font-weight: bold;
+    line-height: 1.625;
+    text-transform: uppercase;
 }
 
 .plan__price {
+    font-size: 48px;
+    margin: 4px 0;
+}
+
+.plan__price__2 {
     font-size: 48px;
     margin: 4px 0;
 }
@@ -779,6 +836,15 @@ button:hover {
     font-weight: 700;
     line-height: 1.5;
     letter-spacing: 0.025em;
+    color: #242424
+}
+
+.plan__target__2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.025em;
+    color: #fff;
 }
 
 .plan__feature {
@@ -789,21 +855,83 @@ button:hover {
     line-height: 1.5;
 }
 
-.plan__button {
-    width: 200px;
-    height:60px;
+.plan__feature__2 {
+    margin-top: 20px;
+    font-weight: 500;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+.plan__button--1 {
+    width: 180px;
+    height:50px;
     border: none;
     border-radius: 320px;
-    background-color: gray;
+    color: rgb(247, 250, 252);
+    background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.625px;
+    transition: 300ms;
+}
+.plan__button--2 {
+    width: 180px;
+    height:50px;
+    border: none;
+    border-radius: 320px;
+    color: rgb(100, 21, 255);
+    background-color: rgb(247, 250, 252);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.625px;
+    transition: 300ms;
+}
+.plan__button--3 {
+    width: 180px;
+    height:50px;
+    border: none;
+    border-radius: 320px;
+    color: rgb(247, 250, 252);
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.625px;
+    transition: 300ms;
+}
+
+.plan__button--1:hover {
+    transform: translate(1px, -1px);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.plan__button--2:hover {
+    transform: translate(1px, -1px);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.plan__button--3:hover {
+    transform: translate(1px, -1px);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .plan__bottom {
     text-align: center;
     margin: 36px 0 36px 0;
-    
+    position: relative;
+
+}
+
+.plans__blob {
+    z-index: -10;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-50%) translateY(50%) scaleX(1) scaleY(1);
+    height: 256px;
+    width: 256px;
+    opacity: 0.25;
 }
    
 
