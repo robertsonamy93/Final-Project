@@ -187,11 +187,12 @@ button {
     padding-bottom: 96px;
     padding-top: 96px;
     padding-left: 80px;
+    padding-right: 80px;
     align-items: center;
 }
 
 .templates__img--wrapper {
-    width: 60%;
+    width: 50%;
 }
 
 .templates__img {
@@ -200,9 +201,10 @@ button {
 }
 
 .about__treact {
-    width: 40%;
+    width: 50%;
     display: flex;
     flex-direction: column;
+    padding: 40px;
 }
 
 .landing__h1 {
@@ -685,6 +687,8 @@ button {
 .pricing__row {
     display: flex;
     flex-direction: column;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .pricing__title {
@@ -954,7 +958,17 @@ button {
     position: relative;
     border:  solid 0.25px;
     border-color:#929cac60;
-    padding: 32px 96px
+    padding: 32px 96px;
+    background-color: #fff;
+}
+
+.plan__bottom--2 {
+    text-align: center;
+    position: relative;
+    border:  solid 0.25px;
+    border-color:#929cac60;
+    padding: 32px 96px;
+    background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
 }
 
 .plans__blob {
@@ -970,6 +984,321 @@ button {
 
 
 /* TESTIMONIALS */
+
+.testimonials__row {
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonials__img {
+    width: 50%;
+}
+
+.testimonials__right {
+    width: 50%;
+    padding-left: 64px;
+}
+
+.testimonials__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    font-size: 16px;
+    color:#6415ff;
+    margin: 0;
+    padding: 0;
+}
+
+.testimonials__sub--title {
+    font-size: 48px;
+    font-weight: 900;
+    margin: 18px 0 30px 0;
+    letter-spacing: 1.6px;
+}
+
+.testimonials__ratings {
+    margin-top: 52px;
+}
+
+.fas {
+    color: rgb(246, 173, 85);
+    border: none;
+}
+
+.user__experience--title {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(36, 62, 99);
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+.testimonials__para {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(124, 139, 161);
+    line-height: 1.625;
+}
+
+.user__experience--para {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.625;
+    margin: 16px 0px 40px;
+    color: rgb(74, 85, 104);
+}
+
+.testimonials__profile {
+    display: flex;
+}
+
+.testimonials__details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 28px;
+}
+
+.user__img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+}
+
+.user__name {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: rgb(36, 62, 99);
+}
+
+.user__job {
+    color: rgb(124, 139, 161);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.testimonials__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonial__buttons {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial__button {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    border: none;
+    transition: all 300ms ease;
+}
+
+.testimonial__button:hover {
+    background-color: rgb(226, 232, 240);
+}
+
+.testimonial__button svg {
+    width: 16px;
+    height: 16px;
+}
+
+.divider {
+    width: 1px;
+    height: 36px;
+    background: rgb(229, 231, 235);
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+
+/* GET STARTED */
+
+.start__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(100, 21, 255);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.start__blob--1, .start__blob--2 {
+    height: 300px;
+    width: 300px;     
+}
+
+.start__blob--1 {
+    position: absolute;
+    bottom:0;
+    left: 0;
+    transform: translateX(-80px) translateY(128px) scaleX(1) scaleY(1);
+    width: 320px;
+    height: 320px;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.start__blob--2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(80px) translateY(-256px);
+    width: 320px;
+    height: 320px;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.start__container {
+    display: flex;
+    padding: 96px;
+    width: 100%;
+    border-radius: 8px;
+    justify-content: center;
+
+}
+
+.start__intro {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.625;
+    width: 50%;
+    padding-left: 100px
+}
+
+.start__buttons {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.get__started--button {
+    height: 70px;
+    padding: 20px 40px;
+    border-radius: 500px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #f7fafc;
+    line-height: 1.5;
+    letter-spacing: 0.025em;
+    margin: 1px;
+    z-index: 2;
+    background-color: #f56565;
+    margin-right: 32px;
+    border: none;
+}
+
+.contact__us--button {
+    height: 70px;
+    padding: 20px 40px;
+    border-radius: 500px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #f7fafc;
+    line-height: 1.5;
+    letter-spacing: 0.025em;
+    margin: 1px;
+    z-index: 2;
+    background-color: rgb(100, 21, 255);
+    border: 1px solid rgb(160, 174, 192);
+   }
+
+
+
+/* FOOTER */
+
+footer {
+    padding: 96px 96px;
+    background-color: rgb(100, 21, 255);
+    margin-bottom: -32px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer__row {
+    width: 100%;
+    max-width: 1280px;
+}
+
+.footer__container {
+   display: flex;
+   justify-content: center;
+   
+}
+
+.footer__columns {
+    display: flex;
+    
+    justify-content: space-between;
+    flex-wrap: wrap;
+       
+}
+
+.footer__column {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: flex-start;
+    z-index: 2;
+}
+
+.column__links {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+.column__title {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.footer__links {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 24px;
+    transition: 300ms ease;
+}
+
+.footer__links:hover:after {
+    opacity: 1;
+}
+
+.footer__links:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    transition: all 300ms;
+}
+
+
+
+
+
+
 
 
    
