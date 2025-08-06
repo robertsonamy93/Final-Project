@@ -8,6 +8,14 @@
     color: #243e63;
 }
 
+.no-cursor {
+    cursor: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
 
 section {
     padding: 0 32px;
@@ -48,6 +56,14 @@ nav {
     color:#6415ff;
 }
 
+.fas fa-bars {
+    color: #6415ff;
+}
+
+.fas fa-times {
+    color: #fff 
+}
+
 a {
     position: relative;
 }
@@ -69,6 +85,68 @@ button {
     background-color:rgb(69, 17, 173);
  }
 
+ .btn__menu {
+    background-color: transparent;
+    font-size: 40px;
+    text-align: center;
+    border: none;
+    color: #6415ff;
+    display: none;
+}
+
+.menu__backdrop {
+    position: absolute;
+    background-color: #6415ff;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+.menu--open .menu__backdrop {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu--open {
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__list {
+    padding: 32px 0;
+}
+
+.menu__link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1.625px;
+}
+
+.btn__menu--close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 8px;
+    color: #fff;
+}
+
 
 
 /* NAV */
@@ -77,6 +155,8 @@ button {
 .nav__row {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
@@ -84,7 +164,7 @@ button {
     display: flex;
     align-items: center;
     margin: 8px 0;
-    padding-bottom: 4px;
+    
 }
 
 .nav__logo--image {
@@ -110,7 +190,7 @@ button {
 
 .nav__link {
     margin: 0 24px;
-    padding-top: 4px;
+    padding: 4px 14px;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.35px;
@@ -159,7 +239,6 @@ button {
     font-size: 14px;
     font-weight: 600px;
     text-decoration: none;
-    padding-top: 4px;
     margin: 0 24px 0 48px;
     font-weight: 600;
     letter-spacing: 0.35px;
@@ -414,7 +493,8 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: 64px;
+    padding-left: 32px;
+    
 }
 
 .quality__work--right {
@@ -635,11 +715,14 @@ button {
 
 .values__left {
     width: 50%;
+    padding-left: 
 
 }
 
 .values__right {
     width: 50%;
+    display: flex;
+
 }
 
 .values__img {
@@ -736,8 +819,9 @@ button {
     line-height: 1.625;
     color: #7c8ba1;
     text-align: center;
-    padding-left: 400px;
-    padding-right: 400px;
+    max-width: 448px;
+    width: 100%;
+    
 }
 
 .pricing__container {
@@ -1044,7 +1128,7 @@ button {
     margin-top: 52px;
 }
 
-.fas {
+.fas fa-star {
     color: rgb(246, 173, 85);
     border: none;
 }
@@ -1412,16 +1496,117 @@ footer {
 
 /* BREAKPOINTS - <600px, 601px, 768px, 992px, 1200px */
 
+@media (max-width: 640px) {
+
+    /* NAV */
+
+    .nav__links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+
+    .nav__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav__logo {
+        margin-bottom: 16px;
+    }
+
+    .nav__links {
+        align-items: center;
+    }
+
+    .nav__link {
+        margin: 8px 0;
+    }
+
+    .nav__hamburger {
+        display: block;
+    }
+
+    /* LANDING */
+
+    .landing__h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .landing__h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    /* FOOTER */
+
+    .start__buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__row {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .footer__columns {
+        justify-content: center;
+    }
+
+}
+
+
+
+
 
 @media (max-width: 768px) {
 
     /* NAV */
 
-    /* REALLY STRUGGLING WITH NAV BAR/HAMBURGER MENU */
     /* REALLY STRUGGLING WITH UNDERSTANDING THE EMAIL INPUT/EMAIL BUTTON, HOW TO I ADJUST THE TEXT SO THAT IT APPEARS EVEN AFTER THE BUTTON HAS BEEN MOVED BELOW INPUT */
 
 
+    .nav__links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+
+    .nav__hamburger {
+        display: block;
+    }
+
+    .nav__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav__logo {
+        margin-bottom: 16px;
+    }
+
+    .nav__hamburger {
+        display: block;
+    }
+
     /* LANDING */
+
+    .landing__h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .landing__h2 {
+        font-size: 20px;
+        text-align: center;
+    }
 
     .templates__row {
         flex-direction: column;
@@ -1773,9 +1958,9 @@ footer {
 .get__started--button, .contact__us--button {
     width: 100%;
     margin: 8px;
-    padding: 16px 0;
-    text-align: center;
-    font-size: 16px;
+    padding: 0;
+    
+    
 }
 
 footer {
@@ -1815,3 +2000,451 @@ footer {
     margin-bottom: 32px;
 }
 
+}
+
+
+@media (max-width: 1024px) {
+
+    /* NAV */
+
+    .nav__links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+
+    .nav__hamburger {
+        display: block;
+    }
+
+    .nav__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav__logo {
+        margin-bottom: 16px;
+    }
+
+    .nav__hamburger {
+        display: block;
+    }
+
+        /* LANDING */
+
+    .landing__h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .landing__h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .templates__row {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .landing__h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .landing__h2 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .header__email {
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .header__customers--title {
+        text-align: center;
+    }
+
+    .header__email--input {
+        position: static;
+        z-index: 0;
+    }
+
+    .header__email--btn {
+        margin-top: 24px;
+        margin: 8px;
+        height: calc(100%-16px);
+        border-radius: 500px;
+        width: 160px;
+        border: none;
+        background-color: #6415ff;
+        color: #fff;
+        font-weight: 700;
+        font-size: 16px;
+        transition: all 300ms;
+        padding: 16px 16px;
+        cursor: pointer;
+    }
+
+    
+
+    .header__customers {
+        padding: 0;
+    }
+
+    .about__treact {
+        width: 100%;
+        max-width: 512px;
+    }
+
+    .templates__img--wrapper {
+        width: 100%;
+        max-width: 512px;
+    }
+
+    /* FEATURES */
+
+    .feature__container {
+        width: 100%
+    }
+
+    .features__row {
+        width: 100%;
+        max-width: 512px;
+    }
+
+    .features__sub-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .feature__title {
+        text-align: center;
+    }
+
+    .feature__img--wrapper {
+        display: flex;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .features__para {
+        font-size: 16px;
+        letter-spacing: 0.6px;
+    }
+
+    .feature {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .feature__para {
+        width: 100%;
+        text-align: center;
+    }
+
+    .feature__row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-width: 448px;
+
+    }
+
+    /* QUALITY */
+    .quality__row {
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        width: 100%;
+        max-width: 448px;
+    }
+
+    .quality__work--left {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 58px;
+    }
+
+    .section__sub--title {
+        font-size: 28px;
+    }
+
+    .quality__para {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+
+    .learn__more--button {
+        margin: 0 auto;
+    }
+    
+    .quality__work--right {
+        width: 100%;
+        
+    }
+
+    /* STEPS */
+
+    .steps__row {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        max-width: 512px;
+    }
+    
+    .steps__image--wrapper {
+        width: 100%;
+        
+
+    }
+
+    .steps__right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .steps__title {
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .steps__sub--title {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .steps__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .step {
+        margin: 0 auto;
+        flex-direction: column;
+    }
+
+    .step__title {
+        text-align: center
+    }
+
+    .step__para {
+        text-align: center;
+    }
+
+    .step__number {
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    /* VALUES */
+
+    .values__container {
+
+    }
+
+    .values__row {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: 512px;
+        
+        
+    }
+
+    .values__left {
+        width: 100%;
+        max-width: 448px;
+        display: flex;
+        flex-direction: column;
+               
+    }
+
+    .values__para {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .values__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .value__title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .value__para {
+        text-align: center;
+    }
+
+    .value__para:nth-child(2) {
+        margin-bottom: 32px;
+    }
+
+    .values__right {
+        width: 100%;
+       display: flex;
+       justify-content: center;
+    }
+
+    .values__img {
+        width: 100%;
+        max-width: 448px;
+        
+    }
+
+    .values__title {
+        text-align: center;
+        margin-top: 54px;
+    } 
+
+    .values__sub--title {
+        text-align: center;
+        font-size: 28px;   
+    }
+    
+/* PRICING */
+
+.pricing__row {
+    width: 100%;
+    max-width: 512px;
+    text-align: center;
+}
+
+.pricing__sub--title {
+    font-size: 28px;
+}
+
+.pricing__para {
+    font-size: 16px;
+    padding: 0;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.plan {
+    margin: 32px 0;
+
+}
+
+
+/* TESTIMONIALS */
+
+.testimonials__row {
+    width: 100%;
+    max-width: 512px;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonials__img {
+    width: 100%;
+    margin-bottom: 48px;
+}
+
+.testimonials__right {
+    width: 100%;
+    
+    text-align: center;
+    padding: 0;
+}
+
+.testimonials__sub--title {
+    font-size: 28px;
+}
+
+.testimonials__para {
+    font-size: 16px;
+}
+
+/* GET STARTED */
+
+.start__row {
+    width: 100%;
+    max-width: 640px;
+    max-height: 448px;
+}
+
+.start__intro {
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 32px;
+    text-align: center;
+}
+
+.start__buttons {
+    width: 100%;
+}
+
+.start__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.get__started--button, .contact__us--button {
+    width: 100%;
+    margin: 8px;
+    padding: 0;
+    
+    
+}
+
+footer {
+    padding: 48px 48px;
+}
+
+.footer__row {
+    width: 100%;
+    max-width: 512px;
+    text-align: center;
+}
+
+.footer__columns {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;       
+}
+
+.footer__column {
+    margin: 38px 32px 38px 32px;
+}
+
+.footer__bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__logo{
+    margin-bottom: 32px;
+}
+
+.copyright {
+    margin-bottom: 32px;
+}
+
+.footer__social--links {
+    margin-bottom: 32px;
+}
+
+    
+}
